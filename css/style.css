@@ -9804,10 +9804,6 @@ h4, h5, h6 {
   }
 }
 
-#attorney-description {
-  transition: all 0.3s ease;
-  min-height: 80px;
-}
 .bg-page-header {
   background: linear-gradient(rgba(55, 55, 63, 0.7), rgba(55, 55, 63, 0.7)), url(../img/pen1.jpg), no-repeat center center;
   background-size: cover;
