@@ -119,7 +119,12 @@
                 <div class="col-12">
                     <div class="bg-primary rounded" style="height: 200px;"></div>
                     <div class="owl-carousel team-carousel position-relative" style="margin-top: -97px; padding: 0 30px;">
-                        <div class="team-item text-center bg-white rounded overflow-hidden pt-4">
+                        <!-- Description Box -->
+<div id="attorney-description" class="bg-dark text-white rounded p-4 mt-4">
+    <p class="mb-0" id="description-text">Click on a photo to learn more about the team member.</p>
+</div>
+
+                        <div class="team-item text-center bg-white rounded overflow-hidden pt-4 data-id="ferdinand"">
                             <h5 class="mb-2 px-4">Ferdinand Nwobodo</h5>
                             <p class="mb-3 px-4">Managing Partner</p>
                             <div class="team-img position-relative">
@@ -131,15 +136,13 @@
                                 </div> -->
                             </div>
                         </div>
-                        <div class="team-item text-center bg-white rounded overflow-hidden pt-4">
+                        <div class="team-item text-center bg-white rounded overflow-hidden pt-4 data-id="sandra"">
                             <h5 class="mb-2 px-4">Sandra Chude</h5>
                             <p class="mb-3 px-4">Partner</p>
                             <div class="team-img position-relative">
-                                <img class="img-fluid" src="img/sandra-2.jpg" alt="">
-                                 <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Test</a>
-                                <div class="dropdown-menu rounded-0 m-0">
-                                    <a href="#" class="dropdown-item">Menu Item 1</a>
+                                <img class="img-fluid" src="img/sandra-2.jpg" alt="sandra">
+                                
+                               
                                     
                                 </div>
                             </div>
@@ -150,7 +153,7 @@
                                 </div> -->
                             </div>
                         </div>
-                        <div class="team-item text-center bg-white rounded overflow-hidden pt-4">
+                        <div class="team-item text-center bg-white rounded overflow-hidden pt-4 data-id="dolapo"">
                             <h5 class="mb-2 px-4">Dolapo Akinboro</h5>
                             <p class="mb-3 px-4">Senior Associate</p>
                             <div class="team-img position-relative">
@@ -162,7 +165,7 @@
                                 </div> -->
                             </div>
                         </div>
-                        <div class="team-item text-center bg-white rounded overflow-hidden pt-4">
+                        <div class="team-item text-center bg-white rounded overflow-hidden pt-4 data-id="osagie"">
                             <h5 class="mb-2 px-4">Osagie Honour</h5>
                             <p class="mb-3 px-4">Senior Associate</p>
                             <div class="team-img position-relative">
@@ -360,8 +363,28 @@
     <script src="mail/jqBootstrapValidation.min.js"></script>
     <script src="mail/contact.js"></script>
 
-    <!-- Template Javascript -->
+    <!-- Template chatgpt Javascript -->
     <script src="js/main.js"></script>
+
+    <script>
+  const descriptions = {
+    ferdinand: "Ferdinand Nwobodo is the Managing Partner of the firm, known for his strategic vision and exceptional legal acumen.",
+    sandra: "Sandra Chude is a Partner with a strong focus on corporate law and client success.",
+    dolapo: "Dolapo Akinboro is a Senior Associate with expertise in regulatory compliance and litigation.",
+    osagie: "Osagie Honour is a Senior Associate recognized for his detailed legal research and client advocacy."
+  };
+
+  const teamItems = document.querySelectorAll(".team-item");
+  const descriptionText = document.getElementById("description-text");
+
+  teamItems.forEach(item => {
+    item.addEventListener("click", () => {
+      const id = item.getAttribute("data-id");
+      descriptionText.innerText = descriptions[id];
+    });
+  });
+</script>
+
 </body>
 
 </html>
