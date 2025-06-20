@@ -131,7 +131,7 @@
                                     <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
                                     <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
                                 </div> -->
-                                <div id="person1" class="description" >
+                                <div id="person1" class="description" style="display:none; >
                                   <p>This is Person 1. They are a Managing Partner.</p>
                                 </div>
                             </div>
@@ -165,7 +165,7 @@
                             <h5 class="mb-2 px-4">Osagie Honour</h5>
                             <p class="mb-3 px-4">Senior Associate</p>
                             <div class="team-img position-relative">
-                                <img class="img-fluid" src="img/Osagie3.jpg" alt="">
+                                <img class="img-fluid" src="img/Osagie3.jpg" alt="" >
                               <!--  <div class="team-social">
                                     <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
                                     <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
@@ -363,17 +363,17 @@
     <script src="js/main.js"></script>
 
 
-<!-- chatgpt-->
-    <script>
-function showText(id) {
-  // First, hide all descriptions
-  let descriptions = document.querySelectorAll('.description');
-  descriptions.forEach(div => div.style.display = 'none');
-
-  // Then, show the selected one
-  document.getElementById(id).style.display = 'block';
-}
-</script>
+    <!-- chatgpt-->
+        <script>
+    function showText(id) {
+      // First, hide all descriptions
+      let descriptions = document.querySelectorAll('.description');
+      descriptions.forEach(div => div.style.display = 'none');
+    
+      // Then, show the selected one
+      document.getElementById(id).style.display = 'block';
+    }
+    </script>
 </body>
 
 </html>
